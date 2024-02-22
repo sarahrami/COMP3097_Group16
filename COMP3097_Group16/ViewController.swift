@@ -9,6 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var CompleteButton: UIButton!
+    
+    @IBOutlet weak var IncompleteButton: UIButton!
+    
+    @IBOutlet weak var InProgressButton: UIButton!
+    
+    @IBOutlet weak var AllTasksButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
