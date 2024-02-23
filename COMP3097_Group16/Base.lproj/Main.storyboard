@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="264.8854961832061" y="374.64788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Dashboard-->
         <scene sceneID="PgE-WO-Zgo">
             <objects>
-                <viewController id="fEE-AC-qpG" customClass="ViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dashboard" id="fEE-AC-qpG" customClass="ViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zjy-ag-rrU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="OIe-Zz-F57" kind="show" id="hes-Nc-mZC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjq-Id-a9j">
                                 <rect key="frame" x="11" y="280" width="179" height="81"/>
@@ -123,11 +126,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=" Incomplete" subtitle=" 2 tasks">
-                                    <imageReference key="image" image="exclamationmark" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                    <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" renderingMode="hierarchical">
                                         <hierarchicalColors>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="groupTableViewBackgroundColor"/>
                                             <color systemColor="systemRedColor"/>
-                                            <color systemColor="systemRedColor"/>
+                                            <color systemColor="systemPinkColor"/>
                                         </hierarchicalColors>
                                     </imageReference>
                                     <backgroundConfiguration key="background"/>
@@ -135,40 +138,113 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.76942896842956543" green="0.22687227684184266" blue="0.22778413813349185" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="noA-Uk-ncj" kind="show" id="Zvr-Ls-PQu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-57-9iY">
                                 <rect key="frame" x="201" y="280" width="176" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="In Progress" subtitle="15 tasks">
+                                <buttonConfiguration key="configuration" style="filled" title="All Tasks" subtitle="15 tasks">
                                     <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czg-BB-ckq">
+                                <rect key="frame" x="16" y="403" width="361" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ADD TASK">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseBackgroundColor" red="0.1572462112165072" green="0.62842135085273032" blue="0.15620118792705281" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UPCOMING TASKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-Ya-O6f">
+                                <rect key="frame" x="16" y="457" width="361" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="84L-g5-8ys"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pvm-eK-P5U"/>
-                    <connections>
-                        <outlet property="AllTasksButton" destination="nVR-57-9iY" id="gNl-Qj-Oah"/>
-                        <outlet property="CompleteButton" destination="jrR-fM-ReD" id="fVf-22-xt9"/>
-                        <outlet property="InProgressButton" destination="yjq-Id-a9j" id="W1V-9T-wMU"/>
-                        <outlet property="IncompleteButton" destination="QIx-Gx-pOb" id="7Ut-Kx-f2J"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZO-6K-q82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153.4351145038167" y="374.64788732394368"/>
         </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="V7O-In-ch6">
+            <objects>
+                <viewController id="OIe-Zz-F57" customClass="CompleteViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79d-J8-vf6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-EG-tBl">
+                                <rect key="frame" x="16" y="103" width="361" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                <color key="textColor" red="0.19252972539999999" green="0.76942896839999997" blue="0.1912502157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Juq-h6-Igj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uqr-YB-Vf4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lB9-8l-cvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="52"/>
+        </scene>
+        <!--Incompleted View Controller-->
+        <scene sceneID="peR-A5-Wcv">
+            <objects>
+                <viewController id="noA-Uk-ncj" customClass="IncompletedViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c1s-KA-ewZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incompleted Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj7-8a-yI0">
+                                <rect key="frame" x="16" y="103" width="361" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XW5-pj-kae"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ex5-Mb-3z5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAO-Rv-sZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="827"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Group" width="340" height="384"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="exclamationmark" catalog="system" width="47" height="128"/>
+        <image name="exclamationmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="fitness.timer.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
