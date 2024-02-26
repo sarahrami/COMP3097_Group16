@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		095DCEF12B886422003B9C16 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DCEF02B886422003B9C16 /* CompleteViewController.swift */; };
-		095DCEF32B886F3B003B9C16 /* IncompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DCEF22B886F3B003B9C16 /* IncompletedViewController.swift */; };
+		80830E1A2B8C6C9200861CB2 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80830E192B8C6C9200861CB2 /* DataViewController.swift */; };
+		80830E1C2B8D064400861CB2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */; };
 		EF7094FE2B86FB8200A40061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7094FD2B86FB8200A40061 /* AppDelegate.swift */; };
 		EF7095002B86FB8200A40061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7094FF2B86FB8200A40061 /* SceneDelegate.swift */; };
 		EF7095022B86FB8200A40061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7095012B86FB8200A40061 /* ViewController.swift */; };
@@ -39,7 +40,8 @@
 
 /* Begin PBXFileReference section */
 		095DCEF02B886422003B9C16 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
-		095DCEF22B886F3B003B9C16 /* IncompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncompletedViewController.swift; sourceTree = "<group>"; };
+		80830E192B8C6C9200861CB2 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EF7094FA2B86FB8200A40061 /* COMP3097_Group16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COMP3097_Group16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7094FD2B86FB8200A40061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7094FF2B86FB8200A40061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,15 +105,16 @@
 		EF7094FC2B86FB8200A40061 /* COMP3097_Group16 */ = {
 			isa = PBXGroup;
 			children = (
+				80830E192B8C6C9200861CB2 /* DataViewController.swift */,
 				095DCEF02B886422003B9C16 /* CompleteViewController.swift */,
 				EF7094FD2B86FB8200A40061 /* AppDelegate.swift */,
 				EF7094FF2B86FB8200A40061 /* SceneDelegate.swift */,
 				EF7095012B86FB8200A40061 /* ViewController.swift */,
 				EF7095032B86FB8200A40061 /* Main.storyboard */,
-				095DCEF22B886F3B003B9C16 /* IncompletedViewController.swift */,
 				EF7095062B86FB8300A40061 /* Assets.xcassets */,
 				EF7095082B86FB8300A40061 /* LaunchScreen.storyboard */,
 				EF70950B2B86FB8300A40061 /* Info.plist */,
+				80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */,
 			);
 			path = COMP3097_Group16;
 			sourceTree = "<group>";
@@ -264,11 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80830E1C2B8D064400861CB2 /* CustomTableViewCell.swift in Sources */,
 				EF7095022B86FB8200A40061 /* ViewController.swift in Sources */,
 				EF7094FE2B86FB8200A40061 /* AppDelegate.swift in Sources */,
 				EF7095002B86FB8200A40061 /* SceneDelegate.swift in Sources */,
 				095DCEF12B886422003B9C16 /* CompleteViewController.swift in Sources */,
-				095DCEF32B886F3B003B9C16 /* IncompletedViewController.swift in Sources */,
+				80830E1A2B8C6C9200861CB2 /* DataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +461,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +489,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
