@@ -8,7 +8,7 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
-    var task: ViewController.Task! = nil;
+    var task: Task? = nil;
     
     @IBOutlet weak var TaskName: UITextField!
     
@@ -23,8 +23,9 @@ class AddTaskViewController: UIViewController {
         
         if let data = task {
             TaskName.text = data.name
-            TaskDescription.text = data.description
+            TaskDescription.text = data.body
             TaskCategory.setTitle(data.category, for: .normal)
+            TaskDate.date = data.date
         }
     }
     

@@ -2,23 +2,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    struct Task {
-        let name: String
-        let description: String
-        let category: String
-        let date: String
-        let time: String
-        let status: String
-        
-        init(name: String, description: String, category: String, date: String, time: String, status: String) {
-            self.name = name
-            self.description = description
-            self.category = category
-            self.date = date
-            self.time = time
-            self.status = status
-        }
-    }
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var tasks = [Task]()
     
@@ -27,28 +11,58 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let task1 = Task(name: "Project", description: "Complete project proposal", category: "Work", date: "23-02-2024", time: "09:00", status: "complete")
-        let task2 = Task(name: "Gym", description: "Go grocery shopping", category: "Personal", date: "23-02-2024", time: "17:30", status: "complete")
-        let task3 = Task(name: "Clean Room", description: "Clean Room", category: "Personal", date: "23-02-2024", time: "17:30", status: "complete")
-        let task4 = Task(name: "Doctor appointment", description: "Go to the doctor", category: "Personal", date: "23-02-2024", time: "17:30", status: "complete")
+        createTask(name: "Project", body: "Complete project proposal", category: "Work", date: Date(), time: Date(), status: "complete")
+        createTask(name: "Gym", body: "Go grocery shopping", category: "Personal", date: Date(), time: Date(), status: "complete")
+        createTask(name: "Clean Room", body: "Clean Room", category: "Personal", date: Date(), time: Date(), status: "complete")
+        createTask(name: "Doctor appointment", body: "Go to the doctor", category: "Personal", date: Date(), time: Date(), status: "complete")
+        //
         
-        tasks = [task1, task2, task3, task4]
+        getTasks()
         
         tableForUpcoming.dataSource = self
         tableForUpcoming.delegate = self
     }
     
+    func getTasks() {
+        do {
+            tasks = try context.fetch(Task.fetchRequest())
+        } catch {
+            
+        }
+    }
+    
+    func createTask(name: String, body: String, category: String, date: Date, time: Date, status: String) {
+        let newTask = Task(context: context)
+        newTask.name = name
+        newTask.body = body
+        newTask.category = category
+        newTask.date = date
+        newTask.time = time
+        newTask.status = status
+    }
+    
+    func deleteTask() {
+        
+    }
+    
+    func updateTask() {
+        
+    }
+    
+    // MARK: UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = tasks[indexPath.row]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YY/MM/dd"
         
         let cell = tableForUpcoming.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         cell.title.text = task.name
         cell.category.text = "Category: \(task.category)"
-        cell.date.text = task.date
+        cell.date.text = dateFormatter.string(from: task.date)
         
         return cell
     }
@@ -64,6 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableForUpcoming.indexPathForSelectedRow {
             let task = tasks[indexPath.row]
