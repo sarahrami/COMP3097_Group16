@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095DCEF12B886422003B9C16 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095DCEF02B886422003B9C16 /* CompleteViewController.swift */; };
+		0964AB2C2B8E798F00ACC0D9 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964AB2B2B8E798F00ACC0D9 /* TaskItem.swift */; };
 		09BB794C2B8DB1FA000607D0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BB794B2B8DB1FA000607D0 /* AddTaskViewController.swift */; };
 		80830E1A2B8C6C9200861CB2 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80830E192B8C6C9200861CB2 /* DataViewController.swift */; };
 		80830E1C2B8D064400861CB2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		095DCEF02B886422003B9C16 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		0964AB2B2B8E798F00ACC0D9 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		09BB794B2B8DB1FA000607D0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		80830E192B8C6C9200861CB2 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				EF7095082B86FB8300A40061 /* LaunchScreen.storyboard */,
 				EF70950B2B86FB8300A40061 /* Info.plist */,
 				80830E1B2B8D064400861CB2 /* CustomTableViewCell.swift */,
+				0964AB2B2B8E798F00ACC0D9 /* TaskItem.swift */,
 			);
 			path = COMP3097_Group16;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				80830E1C2B8D064400861CB2 /* CustomTableViewCell.swift in Sources */,
 				EF7095022B86FB8200A40061 /* ViewController.swift in Sources */,
 				EF7094FE2B86FB8200A40061 /* AppDelegate.swift in Sources */,
+				0964AB2C2B8E798F00ACC0D9 /* TaskItem.swift in Sources */,
 				EF7095002B86FB8200A40061 /* SceneDelegate.swift in Sources */,
 				095DCEF12B886422003B9C16 /* CompleteViewController.swift in Sources */,
 				80830E1A2B8C6C9200861CB2 /* DataViewController.swift in Sources */,

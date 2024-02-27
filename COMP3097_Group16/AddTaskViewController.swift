@@ -14,8 +14,10 @@ class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskDescription: UITextField!
     
-    
     @IBOutlet weak var TaskCategory: UIButton!
+    
+    @IBOutlet weak var TaskDate: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +25,6 @@ class AddTaskViewController: UIViewController {
             TaskName.text = data.name
             TaskDescription.text = data.description
             TaskCategory.setTitle(data.category, for: .normal)
-            
         }
     }
     

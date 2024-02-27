@@ -99,7 +99,7 @@
                                 <rect key="frame" x="11" y="179" width="179" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title=" Complete" subtitle=" 5 tasks" titlePadding="0.0">
+                                <buttonConfiguration key="configuration" style="filled" title=" Complete" subtitle=" 0 tasks" titlePadding="0.0">
                                     <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                                         <hierarchicalColors>
                                             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +120,7 @@
                                 <rect key="frame" x="11" y="280" width="179" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title=" In Progress" subtitle=" 4 tasks">
+                                <buttonConfiguration key="configuration" style="filled" title=" In Progress" subtitle=" 0 tasks">
                                     <imageReference key="image" image="fitness.timer.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                                         <hierarchicalColors>
                                             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="201" y="179" width="176" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title=" Incomplete" subtitle=" 2 tasks">
+                                <buttonConfiguration key="configuration" style="filled" title=" Incomplete" subtitle=" 0 tasks">
                                     <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" renderingMode="hierarchical">
                                         <hierarchicalColors>
                                             <color systemColor="groupTableViewBackgroundColor"/>
@@ -162,7 +162,7 @@
                                 <rect key="frame" x="201" y="280" width="176" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="All Tasks" subtitle="15 tasks">
+                                <buttonConfiguration key="configuration" style="filled" title="All Tasks" subtitle="0 tasks">
                                     <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -655,6 +655,7 @@
                     <navigationItem key="navigationItem" id="P0L-jz-2bG"/>
                     <connections>
                         <outlet property="TaskCategory" destination="oFX-Jo-TJG" id="LXv-1W-Uj2"/>
+                        <outlet property="TaskDate" destination="pjo-uT-kRm" id="Kr1-Zd-szL"/>
                         <outlet property="TaskDescription" destination="mMN-Lo-NW1" id="Gkh-gn-42n"/>
                         <outlet property="TaskName" destination="PK1-xa-0Cz" id="RcR-LI-i2S"/>
                     </connections>
@@ -766,13 +767,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
