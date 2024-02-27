@@ -653,6 +653,11 @@
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="P0L-jz-2bG"/>
+                    <connections>
+                        <outlet property="TaskCategory" destination="oFX-Jo-TJG" id="LXv-1W-Uj2"/>
+                        <outlet property="TaskDescription" destination="mMN-Lo-NW1" id="Gkh-gn-42n"/>
+                        <outlet property="TaskName" destination="PK1-xa-0Cz" id="RcR-LI-i2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfo-6X-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
