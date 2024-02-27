@@ -15,19 +15,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         createTask(name: "Gym", body: "Go grocery shopping", category: "Personal", date: Date(), time: Date(), status: "complete")
         createTask(name: "Clean Room", body: "Clean Room", category: "Personal", date: Date(), time: Date(), status: "complete")
         createTask(name: "Doctor appointment", body: "Go to the doctor", category: "Personal", date: Date(), time: Date(), status: "complete")
-        //
         
         getTasks()
         
         tableForUpcoming.dataSource = self
         tableForUpcoming.delegate = self
     }
-    
+  
+    // MARK: CoreData
     func getTasks() {
         do {
             tasks = try context.fetch(Task.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableForUpcoming.reloadData()
+            }
         } catch {
-            
+            print("Error: \(error)")
         }
     }
     
@@ -39,15 +42,51 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         newTask.date = date
         newTask.time = time
         newTask.status = status
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error: \(error)")
+        }
     }
     
-    func deleteTask() {
+    func deleteTask(task: Task) {
+        context.delete(task)
         
+        do {
+            try context.save()
+        } catch {
+            print("Error: \(error)")
+        }
     }
     
-    func updateTask() {
+    func updateTask(task: Task, name: String?, body: String?, category: String?, date: Date?, time: Date?, status: String?) {
+        if let newName = name {
+            task.name = newName
+        }
+        if let newBody = body {
+            task.body = newBody
+        }
+        if let newCategory = category {
+            task.category = newCategory
+        }
+        if let newDate = date {
+            task.date = newDate
+        }
+        if let newTime = time {
+            task.time = newTime
+        }
+        if let newStatus = status {
+            task.status = newStatus
+        }
         
+        do {
+            try context.save()
+        } catch {
+            print("Error: \(error)")
+        }
     }
+    
     
     // MARK: UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,6 +116,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+//                deleteTask(task: <#T##Task#>)
+            } else if editingStyle == .insert {
+            }
+        }
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
