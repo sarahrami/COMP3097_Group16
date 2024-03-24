@@ -8,7 +8,7 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
-    var task: Task? = nil;
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var TaskName: UITextField!
     
@@ -18,14 +18,39 @@ class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskDate: UIDatePicker!
     
+    @IBOutlet weak var TaskTime: UIDatePicker!
+    
+    @IBAction func AddTaskButton(_ sender: Any) {
+        
+        let name = TaskName.text ?? ""
+        let description = TaskDescription.text ?? ""
+        let category = ""
+        let date = TaskDate.date
+        let time = TaskTime.date
+        let status = "Pending"
+        
+        createTask(name: name, body: description, category: category, date: date, time: time, status: status)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let data = task {
-            TaskName.text = data.name
-            TaskDescription.text = data.body
-            TaskCategory.setTitle(data.category, for: .normal)
-            TaskDate.date = data.date
+    }
+    
+    func createTask(name: String, body: String, category: String, date: Date, time: Date, status: String) {
+        let newTask = Task(context: context)
+        newTask.name = name
+        newTask.body = body
+        //        todo:
+        newTask.category = category
+        newTask.date = date
+        newTask.time = time
+        newTask.status = status
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error: \(error)")
         }
     }
     

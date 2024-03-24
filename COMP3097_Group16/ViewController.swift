@@ -11,11 +11,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createTask(name: "Project", body: "Complete project proposal", category: "Work", date: Date(), time: Date(), status: "complete")
-        createTask(name: "Gym", body: "Go grocery shopping", category: "Personal", date: Date(), time: Date(), status: "complete")
-        createTask(name: "Clean Room", body: "Clean Room", category: "Personal", date: Date(), time: Date(), status: "complete")
-        createTask(name: "Doctor appointment", body: "Go to the doctor", category: "Personal", date: Date(), time: Date(), status: "complete")
-        
         getTasks()
         
         tableForUpcoming.dataSource = self
@@ -109,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = tasks[indexPath.row]
         
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "AddTaskViewController") as? AddTaskViewController {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "AddTaskViewController") as? EditTaskViewController {
             viewController.task = task
             navigationController?.pushViewController(viewController, animated: true)
         }
@@ -130,7 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let indexPath = tableForUpcoming.indexPathForSelectedRow {
             let task = tasks[indexPath.row]
             
-            if let dest = segue.destination as? AddTaskViewController {
+            if let dest = segue.destination as? EditTaskViewController {
                 dest.task = task
             }
         }
