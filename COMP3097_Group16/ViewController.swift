@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = tasks[indexPath.row]
         
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "AddTaskViewController") as? EditTaskViewController {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "EditTaskViewController") as? EditTaskViewController {
             viewController.task = task
             navigationController?.pushViewController(viewController, animated: true)
         }

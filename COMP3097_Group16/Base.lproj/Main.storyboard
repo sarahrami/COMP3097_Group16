@@ -538,7 +538,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="WCE-3j-mri">
             <objects>
-                <viewController restorationIdentifier="AddTaskViewController" storyboardIdentifier="AddTaskViewController" id="dJ2-ke-xQw" userLabel="Add Task View Controller" customClass="EditTaskViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="EditTaskViewController" storyboardIdentifier="EditTaskViewController" id="dJ2-ke-xQw" userLabel="Add Task View Controller" customClass="EditTaskViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wN-1n-8q8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,6 +663,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="P0L-jz-2bG"/>
                     <connections>
+                        <outlet property="TaskCategory" destination="oFX-Jo-TJG" id="6RL-QR-zUu"/>
                         <outlet property="TaskDate" destination="pjo-uT-kRm" id="y0V-6S-Sdf"/>
                         <outlet property="TaskDescription" destination="mMN-Lo-NW1" id="Tg0-58-bdZ"/>
                         <outlet property="TaskName" destination="PK1-xa-0Cz" id="XAI-Xg-uTt"/>
