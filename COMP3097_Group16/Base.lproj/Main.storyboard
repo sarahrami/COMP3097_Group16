@@ -193,7 +193,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wCu-By-IRA">
-                                <rect key="frame" x="16" y="503" width="361" height="285"/>
+                                <rect key="frame" x="16" y="519" width="361" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -457,7 +457,7 @@
         <!--All Tasks View Controller-->
         <scene sceneID="O3a-b4-YbF">
             <objects>
-                <viewController id="2ik-9j-VdJ" userLabel="All Tasks View Controller" customClass="IncompletedViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2ik-9j-VdJ" userLabel="All Tasks View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJy-pk-bJZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,7 +596,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="P0L-jz-2bG"/>
                     <connections>
-                        <outlet property="TaskCategory" destination="poB-81-Se4" id="BvH-NB-muw"/>
                         <outlet property="TaskDate" destination="pjo-uT-kRm" id="y0V-6S-Sdf"/>
                         <outlet property="TaskDescription" destination="mMN-Lo-NW1" id="Tg0-58-bdZ"/>
                         <outlet property="TaskName" destination="PK1-xa-0Cz" id="XAI-Xg-uTt"/>
@@ -610,7 +609,7 @@
         <!--About View Controller-->
         <scene sceneID="1q8-f0-AJ1">
             <objects>
-                <viewController id="Nye-Ar-RtK" userLabel="About View Controller" customClass="IncompletedViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nye-Ar-RtK" userLabel="About View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8L-qI-o3k">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
