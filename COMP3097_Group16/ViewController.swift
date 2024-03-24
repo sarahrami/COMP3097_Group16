@@ -16,7 +16,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableForUpcoming.dataSource = self
         tableForUpcoming.delegate = self
     }
-  
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getTasks()
+    }
+    
     // MARK: CoreData
     func getTasks() {
         do {
@@ -113,12 +118,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                tableView.deleteRows(at: [indexPath], with: .fade)
-//                deleteTask(task: <#T##Task#>)
-            } else if editingStyle == .insert {
-            }
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            //                deleteTask(task: <#T##Task#>)
+        } else if editingStyle == .insert {
         }
+    }
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

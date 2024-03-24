@@ -31,13 +31,7 @@ class AddTaskViewController: UIViewController {
         
         createTask(name: name, body: description, category: category, date: date, time: time, status: status)
         
-        
-        if let viewController = presentingViewController as? ViewController {
-            viewController.getTasks()
-        }
-        
-        dismiss(animated: true, completion: nil)
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
@@ -49,7 +43,6 @@ class AddTaskViewController: UIViewController {
         let newTask = Task(context: context)
         newTask.name = name
         newTask.body = body
-        //        todo:
         newTask.category = category
         newTask.date = date
         newTask.time = time

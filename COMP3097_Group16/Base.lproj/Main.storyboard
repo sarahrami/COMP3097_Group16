@@ -83,7 +83,7 @@
         <!--Dashboard-->
         <scene sceneID="PgE-WO-Zgo">
             <objects>
-                <viewController title="Dashboard" id="fEE-AC-qpG" customClass="ViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fEE-AC-qpG" customClass="ViewController" customModule="COMP3097_Group16" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zjy-ag-rrU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
