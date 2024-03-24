@@ -119,8 +119,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            //                deleteTask(task: <#T##Task#>)
+            let task = tasks[indexPath.row]
+                   deleteTask(task: task)
+                   tasks.remove(at: indexPath.row)
+                   tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
         }
     }
