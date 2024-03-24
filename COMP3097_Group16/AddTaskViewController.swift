@@ -30,6 +30,16 @@ class AddTaskViewController: UIViewController {
         let status = "Pending"
         
         createTask(name: name, body: description, category: category, date: date, time: time, status: status)
+        
+        
+        // Refetch tasks after adding a new task
+        if let viewController = presentingViewController as? ViewController {
+            viewController.getTasks()
+        }
+        
+        // Dismiss the current view controller to go back to the previous one
+        dismiss(animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {

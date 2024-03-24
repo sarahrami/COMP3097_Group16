@@ -18,6 +18,8 @@ class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskDate: UIDatePicker!
     
+    @IBOutlet weak var TaskTime: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,7 @@ class EditTaskViewController: UIViewController {
             TaskDescription.text = data.body
             TaskCategory.setTitle(data.category, for: .normal)
             TaskDate.date = data.date
+            TaskTime.date = data.time
         }
     }
     
