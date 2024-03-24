@@ -596,6 +596,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="P0L-jz-2bG"/>
                     <connections>
+                        <outlet property="TaskCategory" destination="poB-81-Se4" id="8op-e7-WYW"/>
                         <outlet property="TaskDate" destination="pjo-uT-kRm" id="y0V-6S-Sdf"/>
                         <outlet property="TaskDescription" destination="mMN-Lo-NW1" id="Tg0-58-bdZ"/>
                         <outlet property="TaskName" destination="PK1-xa-0Cz" id="XAI-Xg-uTt"/>
