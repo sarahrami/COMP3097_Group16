@@ -14,7 +14,7 @@ class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskDescription: UITextField!
     
-    @IBOutlet weak var TaskCategory: UIButton!
+    @IBOutlet weak var TaskCategory: UITextField!
     
     @IBOutlet weak var TaskDate: UIDatePicker!
     
@@ -26,7 +26,7 @@ class EditTaskViewController: UIViewController {
         if let data = task {
             TaskName.text = data.name
             TaskDescription.text = data.body
-            TaskCategory.setTitle(data.category, for: .normal)
+            TaskCategory.text = data.category
             TaskDate.date = data.date
             TaskTime.date = data.time
         }

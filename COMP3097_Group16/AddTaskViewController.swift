@@ -14,7 +14,7 @@ class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskDescription: UITextField!
     
-    @IBOutlet weak var TaskCategory: UIButton!
+    @IBOutlet weak var TaskCategory: UITextField!
     
     @IBOutlet weak var TaskDate: UIDatePicker!
     
@@ -24,7 +24,7 @@ class AddTaskViewController: UIViewController {
         
         let name = TaskName.text ?? ""
         let description = TaskDescription.text ?? ""
-        let category = ""
+        let category = TaskCategory.text ?? ""
         let date = TaskDate.date
         let time = TaskTime.date
         let status = "Pending"
