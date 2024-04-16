@@ -82,6 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         do {
             try context.save()
+            print("Task updated successfully")
         } catch {
             print("Error: \(error)")
         }
