@@ -8,10 +8,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableForUpcoming: UITableView!
     
+    @IBOutlet weak var allTasks: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getTasks()
+        
+        
         
         tableForUpcoming.dataSource = self
         tableForUpcoming.delegate = self
