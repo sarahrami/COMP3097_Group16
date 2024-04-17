@@ -1,28 +1,27 @@
 import UIKit
 import CoreData
 
-class CompleteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class AllTaskViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     var tasks = [Task]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    @IBOutlet weak var completedTasks: UITableView!
-    
+    @IBOutlet weak var allTask: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        completedTasks.dataSource = self
-        completedTasks.delegate = self
+        
+        allTask.dataSource = self
+        allTask.delegate = self
 
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "status == %@", "complete")
-        
+       
         do {
             tasks = try context.fetch(fetchRequest)
             print(tasks)
         } catch {
             print("Error: \(error)")
         }
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
