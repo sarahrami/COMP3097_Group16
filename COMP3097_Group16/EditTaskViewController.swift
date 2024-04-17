@@ -39,13 +39,13 @@ class EditTaskViewController: UIViewController {
             TaskCategory.text = data.category
             TaskDate.date = data.date
             TaskTime.date = data.time
-            completedSwitch.isOn = data.status == "Completed"
+            completedSwitch.isOn = data.status == "complete"
         }
     }
     @IBAction func toggleCompleted(_ sender: UISwitch) {
         if let task = task {
             
-            task.status = sender.isOn ? "Completed" : "Pending"
+            task.status = sender.isOn ? "complete" : "Pending"
             let newName = TaskName.text ?? ""
             let newBody = TaskDescription.text ?? ""
             let newCategory = TaskCategory.text ?? ""
